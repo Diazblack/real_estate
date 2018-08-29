@@ -28,4 +28,10 @@ class House
     end
     house_area
   end
+
+  def price_per_square_foot
+    large = @price.length
+    number = @price[1..large].to_f
+    (number / self.area).round(2)
+  end
 end
