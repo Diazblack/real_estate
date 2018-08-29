@@ -15,10 +15,17 @@ class House
 
   def rooms_from_category(space)
     @rooms.select do |room|
-    if room.category == space
-       room
-    end
+      if room.category == space
+        room
+     end
     end
   end
 
+  def area
+    house_area = 0
+    @rooms.each do |room|
+      house_area += room.area
+    end
+    house_area
+  end
 end
