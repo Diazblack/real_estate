@@ -13,4 +13,12 @@ class House
     @rooms << room
   end
 
+  def rooms_from_category(space)
+    @rooms.select do |room|
+    if room.category == space
+       room
+    end
+    end
+  end
+
 end
